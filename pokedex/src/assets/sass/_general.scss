@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    text-align: center;
+    height: auto;
+
+    h2 {
+        font-size: 4rem;
+        padding: 4rem;
+    }
+}
+
+.button-gen {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}

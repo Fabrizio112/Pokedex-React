@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  text-align: center;
+  height: auto;
+}
+#root h2 {
+  font-size: 4rem;
+  padding: 4rem;
+}
+
+.button-gen {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#container-buttons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+#container-pokemons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 3rem;
+  gap: 1rem;
+}
+
+#card {
+  max-width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+#card img {
+  width: 150px;
+}
+#card span {
+  font-weight: 900;
+  color: white;
+}
+#card h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: white;
+}
+#card div {
+  margin-top: 1rem;
+  gap: 1rem;
+  display: flex;
+}
+#card div button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+#btn-type {
+  border: none;
+  color: white;
+  border: 2px solid;
+}
+
+.steel {
+  background-color: #60a1b8;
+}
+
+.water {
+  background-color: #2980ef;
+}
+
+.bug {
+  background-color: #91a119;
+}
+
+.dragon {
+  background-color: #5061e1;
+}
+
+.electric {
+  background-color: #fac000;
+}
+
+.ghost {
+  background-color: #704170;
+}
+
+.fire {
+  background-color: #e62829;
+}
+
+.fairy {
+  background-color: #f170f1;
+}
+
+.ice {
+  background-color: #3fd8ff;
+}
+
+.fighting {
+  background-color: #ff8000;
+}
+
+.normal {
+  background-color: #9fa19f;
+}
+
+.grass {
+  background-color: #3fa129;
+}
+
+.psychic {
+  background-color: #f04179;
+}
+
+.rock {
+  background-color: #afa981;
+}
+
+.dark {
+  background-color: #50413f;
+}
+
+.ground {
+  background-color: #915121;
+}
+
+.poison {
+  background-color: #9141cb;
+}
+
+.flying {
+  background-color: #81b9ef;
+}
+
+/*# sourceMappingURL=styles.css.map */
