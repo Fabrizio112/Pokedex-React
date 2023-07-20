@@ -30,3 +30,5 @@ Basically that is all the app but i dont like the individual information of each
 
 
 For the styles , I decided to use SASS. I feel more confortable to develop. I thougth in Styled Components but it tecnology i dont have so much practise it
+
+![Pikachu gift](./pokedex/src/assets/pikachu-pokemon.gif)
