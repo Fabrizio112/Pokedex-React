@@ -1,6 +1,7 @@
 # Pokedex maded  in _React_
 
 In this proyect was used hooks like **useState,useEffect,useContext** and technologies like **HTML,CSS,Javascript,React, Sass**
+Note: I added for routes managment, React-Router .
 
 _This proyect was built with the purpose of practising React_
 
