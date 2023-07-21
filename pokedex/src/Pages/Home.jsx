@@ -3,7 +3,7 @@ import ContenedorDeBotones from "../Components/ContenedorDeBotones";
 function Home() {
     return (
         <>
-            <h2>Pokedex con React</h2>
+            <h2>Pokedex with React</h2>
             <ContenedorDeBotones />
         </>);
 }
