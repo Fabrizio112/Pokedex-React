@@ -2,11 +2,16 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #root {
     text-align: center;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         font-size: 4rem;
@@ -21,4 +26,27 @@
     font-size: 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    background-color: yellowgreen;
+    text-decoration: none;
+    color: white;
+}
+
+.back {
+    @extend .button-gen;
+    margin-top: 3rem;
+    background-color: transparent;
+    border: 1px solid;
+    color: black;
+}
+
+.error {
+    width: 100%;
+    height: 20vh;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 8rem;
 }

@@ -2,24 +2,51 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #root {
   text-align: center;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #root h2 {
   font-size: 4rem;
   padding: 4rem;
 }
 
-.button-gen {
+.button-gen, .back {
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.5rem;
   border-radius: 10px;
   cursor: pointer;
+  background-color: yellowgreen;
+  text-decoration: none;
+  color: white;
+}
+
+.back {
+  margin-top: 3rem;
+  background-color: transparent;
+  border: 1px solid;
+  color: black;
+}
+
+.error {
+  width: 100%;
+  height: 20vh;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 8rem;
 }
 
 #container-buttons {
@@ -34,18 +61,20 @@
 
 #container-pokemons {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin: 3rem;
   gap: 1rem;
+  justify-items: center;
 }
 
 #card {
-  max-width: 300px;
-  height: 300px;
+  min-width: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 20px;
 }
 #card img {
@@ -70,6 +99,10 @@
   font-size: 1rem;
   border-radius: 10px;
   text-transform: capitalize;
+}
+#card a {
+  margin: 0.5rem 0;
+  color: white;
 }
 
 #btn-type {
@@ -148,6 +181,54 @@
 
 .flying {
   background-color: #81b9ef;
+}
+
+#pokemon-individual {
+  margin-top: 2rem;
+  width: 80%;
+  box-shadow: 0px 0px 2px black;
+  border-radius: 10%;
+  padding: 0 2rem;
+}
+#pokemon-individual h1 {
+  font-size: 3rem;
+  padding: 2rem;
+  text-transform: capitalize;
+}
+#pokemon-individual #container-pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pokemon-individual #container-pokemon #info-pokemon {
+  width: 50%;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  gap: 1rem;
+  display: flex;
+  margin: 2rem 0;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px black;
+}
+#pokemon-individual #container-pokemon #info-pokemon ul {
+  list-style: none;
+}
+#pokemon-individual #container-pokemon #info-pokemon ul li {
+  text-transform: capitalize;
+}
+#pokemon-individual #container-pokemon #info-pokemon button {
+  padding: 0.5rem;
+  border-radius: 30px;
+  text-transform: capitalize;
+}
+#pokemon-individual #container-pokemon #img-pokemon {
+  width: 50%;
+  height: 100%;
+}
+#pokemon-individual #container-pokemon #img-pokemon img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

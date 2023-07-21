@@ -4,6 +4,7 @@ const PokemonContext = createContext()
 const PokemonProvider = ({ children }) => {
     const [generation, setGeneration] = useState("")
     const [pokemons, setPokemons] = useState([])
+    const [pokemonIndividual, setPokemonIndividual] = useState([])
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         fetch(generation)
@@ -15,7 +16,7 @@ const PokemonProvider = ({ children }) => {
                 let respuesta = `${error.status} ` + error.statusText || "Ha ocurrido un error"
             })
     }, [generation])
-    const data = { generation, setGeneration, pokemons, setLoading, loading }
+    const data = { generation, setGeneration, pokemons, setLoading, loading, pokemonIndividual, setPokemonIndividual }
     return (
         <PokemonContext.Provider value={data}>{children}</PokemonContext.Provider>
     )

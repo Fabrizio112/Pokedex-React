@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ContenedorTipos from "./ContenedorTipos";
-
-function PokemonCard({ name, setLoading }) {
+import { Link } from "react-router-dom"
+function PokemonCard({ name, setLoading, setPokemonIndividual }) {
     const [infoPokemon, setInfoPokemon] = useState("")
     const [mainType, setMainType] = useState("")
     useEffect(() => {
@@ -19,12 +19,18 @@ function PokemonCard({ name, setLoading }) {
             })
         setLoading(false)
     }, [infoPokemon])
+
+    const handleClick = () => {
+        setPokemonIndividual(infoPokemon)
+    }
+
     return (
         <div id="card" className={mainType && mainType}>
             <span>{infoPokemon.id && infoPokemon.id}</span>
-            <img src={infoPokemon && infoPokemon.sprites.front_default ? infoPokemon.sprites.front_default : ""} alt={infoPokemon.name} />
+            <img src={infoPokemon && infoPokemon.sprites.front_default && infoPokemon.sprites.front_default} alt={infoPokemon.name} />
             <h1>{infoPokemon.name}</h1>
             <ContenedorTipos types={infoPokemon.types} />
+            <Link onClick={handleClick} to={`${infoPokemon.id}`} >View More</Link>
         </div>);
 }
 

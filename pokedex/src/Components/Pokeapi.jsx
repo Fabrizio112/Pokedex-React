@@ -1,19 +1,22 @@
 import { useContext } from "react";
-import PokemonContext from "../context/PokemonContext";
-import ContenedorDeBotones from "./ContenedorDeBotones";
-import PokemonCard from "./PokemonCard";
-import loader from "../assets/loader.svg"
+import { HashRouter, Routes, Route } from "react-router-dom"
+import Home from "../Pages/Home";
+import Generation from "../Pages/Generation";
+import "../assets/css/styles.css"
+import PokemonIndividual from "../Pages/PokemonIndividual";
 
 function Pokeapi() {
-    const { pokemons, loading, setLoading } = useContext(PokemonContext)
     return (
         <>
-            <h2>Pokedex con React</h2>
-            <ContenedorDeBotones />
-            <section id="container-pokemons">
-                {loading && <img src={loader} />}
-                {pokemons && pokemons.map((data) => < PokemonCard key={data.name} name={data.name} setLoading={setLoading} />)}
-            </section>
+            <HashRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/:name" element={<Generation />} />
+                    <Route path="/:name/:id" element={<PokemonIndividual />} />
+                    <Route path="*" element={<h1>404 Not Found</h1>} />
+                </Routes>
+            </HashRouter>
+
         </ >
     );
 }
