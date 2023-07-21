@@ -3,8 +3,7 @@ import PokemonContext from "../context/PokemonContext";
 import { useNavigate } from "react-router-dom"
 
 function PokemonIndividual() {
-    const { pokemonIndividual } = useContext(PokemonContext)
-    console.log(pokemonIndividual)
+    const { pokemonIndividual, mainContainer } = useContext(PokemonContext)
     let navigate = useNavigate()
     return (
         <>
@@ -12,7 +11,7 @@ function PokemonIndividual() {
             {pokemonIndividual.length != 0 ?
                 <>
                     <button onClick={() => navigate(-1)} className="back">Back</button>
-                    <section id="pokemon-individual">
+                    <section id="pokemon-individual" className={`${mainContainer && mainContainer}`} >
 
                         <h1>#{pokemonIndividual.id} {pokemonIndividual.name}</h1>
 

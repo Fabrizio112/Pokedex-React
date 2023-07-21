@@ -194,6 +194,7 @@
   font-size: 3rem;
   padding: 2rem;
   text-transform: capitalize;
+  color: white;
 }
 #pokemon-individual #container-pokemon {
   display: flex;

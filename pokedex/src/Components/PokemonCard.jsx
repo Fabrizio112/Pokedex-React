@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import ContenedorTipos from "./ContenedorTipos";
 import { Link } from "react-router-dom"
-function PokemonCard({ name, setLoading, setPokemonIndividual }) {
-    const [infoPokemon, setInfoPokemon] = useState("")
-    const [mainType, setMainType] = useState("")
+function PokemonCard({ name, setLoading, setPokemonIndividual, setMainContainer }) {
+
+    const [infoPokemon, setInfoPokemon] = useState("")//Este estado permite obtener toda la informacion del pokemon
+
+    const [mainType, setMainType] = useState("")//Este estado permite obtener el tipo principal del pokemon para poder luego colorear la UI
+
     useEffect(() => {
         setLoading(true)
         const url = `https://pokeapi.co/api/v2/pokemon/${name}`
@@ -12,15 +15,17 @@ function PokemonCard({ name, setLoading, setPokemonIndividual }) {
             .then(json => {
                 setInfoPokemon(json)
                 json.types.map((type, index) => { index === 0 && setMainType(type.type.name) })
+                setLoading(false)
             })
             .catch(error => {
                 let respuesta = `${error.status} ` + error.statusText || "Ha ocurrido un error"
                 console.log(respuesta.results)
             })
-        setLoading(false)
+
     }, [infoPokemon])
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        setMainContainer(e.target.parentElement.className)
         setPokemonIndividual(infoPokemon)
     }
 
