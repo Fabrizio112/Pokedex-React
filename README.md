@@ -5,6 +5,10 @@ Note: I added for routes managment, React-Router .
 
 _This proyect was built with the purpose of practising React_
 
+<p align="center">
+ <img src="./pokedex/src/assets/pikachu-pokemon.gif" alt="Pikachu App">
+</p>
+
 ## How i thought about the project and its functioning
 
 **_Main Idea : Pokedex where the pokemons was categorized  by generations or Regions_**
@@ -18,18 +22,14 @@ My idea was  to have a different buttons representing  different generation of P
  After this ,I needed to implement  the logic for the buttons (so that when you click on a button,the corresponding generation of pokemons appears)
  
 
-
 I created a context whith two states, one called "generation" and the other called "pokemons".The "generation" state stores the generation the user wants to know about. So when the user clicks ,using useContenxt, store the url of the selected  generation in the "generation" state. Inside the useEffect ,I have  a list of dependencies ,including the variable "generation".Each time  the user clicks , useEffect performs the fetch to retrieve  the corresponding Pokemons
 
- Poseo un renderizado condicional que cuando la variable "pokemons" posee algo , se renderizan los diferentes pokemones
 
  My app has a condicional render .When the "pokemons" state has any, the "Pokemons" component renders
 
- Eso seria basicamente toda la app , pero como la informacion que traia individualmente de cada pokemon no me gustaba , decidi crear en el componente individual de cada pokemon un estado el cual va a almacenar la informacion que va a traer otra peticion , la cual a partir del nombre del pokemon(esta informacion ya la poseemos) va a traer una informacion mas completa de este
 
 Basically that is all the app but i dont like the individual information of each pokemon. So ,in the "PokemonCard" component ,I decided to create an "infoPokemon" state. This state stores more comprehensive information obtained from another fetch.The fetch is done using just the Pokemon name(https://pokeapi.co/api/v2/pokemon/name)
 
 
 For the styles , I decided to use SASS. I feel more confortable to develop. I thougth in Styled Components but it tecnology i dont have so much practise it
 
-![Pikachu gift](./pokedex/src/assets/pikachu-pokemon.gif)
