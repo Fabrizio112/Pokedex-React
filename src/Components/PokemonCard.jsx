@@ -15,12 +15,13 @@ function PokemonCard({ name, setLoading, setPokemonIndividual, setMainContainer 
             .then(json => {
                 setInfoPokemon(json)
                 json.types.map((type, index) => { index === 0 && setMainType(type.type.name) })
-                setLoading(false)
+
             })
             .catch(error => {
                 let respuesta = `${error.status} ` + error.statusText || "Ha ocurrido un error"
                 console.log(respuesta.results)
             })
+        setLoading(false)
 
     }, [infoPokemon])
 
