@@ -6,7 +6,7 @@ Note: I added for routes managment, React-Router .
 _This proyect was built with the purpose of practising React_
 
 <p align="center">
- <img src="./pokedex/src/assets/pikachu-pokemon.gif" alt="Pikachu App">
+ <img src="src/assets/pikachu-pokemon.gif" alt="Pikachu App">
 </p>
 
 ## How i thought about the project and its functioning
