@@ -1,4 +1,45 @@
-# Pokedex maded  in _React_
+# <p style="font-size:3rem;margin:0"><img style="padding-right:0.5rem" src='https://img.freepik.com/vector-premium/bandera-argentina-bandera-argentina-ilustracion-vectorial_685751-66.jpg' width="50px" >  <span>ESPAÑOL:</span></p> 
+
+## <i align="center" style="font-size:2rem">🐇 POKEDEX HECHA EN   _REACT_</i>
+
+En este proyecto se utilizaron hooks como **useState,useEffect,useContext** y tecnologias como **HTML,CSS,Javascript,React, Sass**
+Nota: Para el manejo de rutas se añadio, React-Router .
+
+_Este proyecto se realizo con el proposito de practicar React_
+
+<p align="center">
+ <img src="src/assets/squirtle.gif" alt="Squirtle">
+</p>
+
+## 💡 Como se pensó este proyecto y como funciona
+
+**_Idea Princiapl : Una Pokedex en donde los pokemones esten categorizados por generaciones o regiones_**
+
+La api que se utilizo: [Pokeapi](https://pokeapi.co/api/v2/)
+
+Primero que nada, Ya habia realizado una pokedex pero la habia realizado en Vanilla JavaScript por lo tanto la idea principal era re crearla en React
+
+Mi idea fue a traves de diferentes botones representar las diferentes generaciones de pokemones . Cuando el usuario haga click en alguno de estos botones , todos los pokemones de la generacion seleccionada/elegida se mostraran en la pantalla
+
+Por lo tanto , para el primer desafio de la app, cree el contenedor que almacenara todos los botones. Inicialmente planeaba crear todos los botones manualmente , pero buscando en la API encontre una forma para simplificar este proceso . Decidi usar una peticion fetch a la API con el endpoint _generation_ (https://pokeapi.co/api/v2/generation)
+
+Despues de esto , Necesitaba implementar la logica para los botones (Cuando los usuarios hicieran click en un boton , la generacion correspondiente de pokemons apareciera en pantalla)
+
+Cree un contexto con 2 estados , uno llamado **_"generation"_** y otro **_"pokemons"_**. El primer estado almacena la generacion que el usuario desea conocer, cuando se hace click en un boton se almacena la url de esa generacion. Tambien poseo un efecto que posee de dependencia "generation" por lo tanto cada vez que el usuario realiza click y cambia ese estado , se realiza la correspondiente peticion para poder poseer la ultima generacion que se desea conocer sus pokemones.
+
+La app posee un renderizado condicional . Cuando el estado "pokemones" posee algo , se renderizan los diferentes pokemones.
+
+Basicamente eso es la aplicacion pero no me gustaba la informacion individual con la que venia cada pokemon. Por lo tanto en el componente "PokemonCard" decidi crear un estado llamdo "infoPokemon". Este estado almacena informacion que considero mas relevante y se obtiene de otra peticion . Esta peticion se realiza utilizando el nombre del pokemon (https://pokeapi.co/api/v2/pokemon/name)
+
+Para los estilos , decidí usar SASS. Lo siento muy comodo y agil para desarrollar los estilos en el 
+
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+# <p style="font-size:3rem;margin:0"><img style="padding-right:0.5rem" src="https://img.freepik.com/vector-premium/gran-bretana-bandera-bandera-inglaterra-vector-icono-reino-unido-bandera-gran-bretana-10-eps_800531-104.jpg" width="50px"> <span>ENGLISH:</span></p>
+
+
+## <i align="center" style="font-size:2rem">⭐ POKEDEX MADE IN  _REACT_</i>
 
 In this proyect was used hooks like **useState,useEffect,useContext** and technologies like **HTML,CSS,Javascript,React, Sass**
 Note: I added for routes managment, React-Router .
@@ -9,9 +50,11 @@ _This proyect was built with the purpose of practising React_
  <img src="src/assets/pikachu-pokemon.gif" alt="Pikachu App">
 </p>
 
-## How i thought about the project and its functioning
+## 🤔 How i thought about the project and its functioning
 
 **_Main Idea : Pokedex where the pokemons was categorized  by generations or Regions_**
+
+The Api used was :[Pokeapi](https://pokeapi.co/api/v2/)
 
 First of all , I made other Pokedex but it was made in Vanilla JavaScript .So I got the main idea ,and I tried to do  it in React 
 
