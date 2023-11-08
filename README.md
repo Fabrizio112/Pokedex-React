@@ -31,7 +31,7 @@ La app posee un renderizado condicional . Cuando el estado "pokemones" posee alg
 
 Basicamente eso es la aplicacion pero no me gustaba la informacion individual con la que venia cada pokemon. Por lo tanto en el componente "PokemonCard" decidi crear un estado llamdo "infoPokemon". Este estado almacena informacion que considero mas relevante y se obtiene de otra peticion . Esta peticion se realiza utilizando el nombre del pokemon (https://pokeapi.co/api/v2/pokemon/name)
 
-Para los estilos , decidí usar SASS. Lo siento muy comodo y agil para desarrollar los estilos en el 
+Para los estilos , decidí usar SASS. Lo siento muy comodo y agil para desarrollar los estilos en él 
 
 
 ----------------------------------------------------------------------------------------------
